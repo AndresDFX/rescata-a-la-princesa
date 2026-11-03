@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#e91e63" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Princesa" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icon-192.png" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <title>Rescata a la Princesa</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+  </script>
+</head>
+<body>
+  <div id="hud">
+    <div id="goal">💗 Encuentra a la princesa en el castillo</div>
+    <div id="keys">WASD / Flechas: moverse · Espacio: saltar · K / Enter: besar · Mouse: girar cámara</div>
+  </div>
+  <div id="prompt" class="hidden">Presiona <b>K</b> o <b>Enter</b> para besar 💋</div>
+  <div id="love" class="hidden">
+    <h1>Te quiero mucho</h1>
+    <p id="again">Presiona R para jugar de nuevo</p>
+  </div>
+  <div id="touch" class="hidden">
+    <div id="stick"><div id="knob"></div></div>
+    <button id="btnJump">⤒</button>
+    <button id="btnKiss">💋</button>
+  </div>
+  <div id="loading">Cargando...</div>
+  <script type="module" src="main.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) addEventListener('load', () => navigator.serviceWorker.register('sw.js'));
+  </script>
+</body>
+</html>
