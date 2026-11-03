@@ -1,5 +1,5 @@
-const CACHE = 'princesa-v1';
-const ASSETS = ['./', 'index.html', 'style.css', 'main.js', 'foto.jpg', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png',
+const CACHE = 'princesa-v2';
+const ASSETS = ['./', 'index.html', 'style.css', 'main.js', 'foto.jpg', 'perro.jpg', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png',
   'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js'];
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS))); self.skipWaiting(); });
 self.addEventListener('activate', (e) => {

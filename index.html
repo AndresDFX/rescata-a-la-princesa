@@ -19,17 +19,40 @@
 <body>
   <div id="hud">
     <div id="goal">💗 Encuentra a la princesa en el castillo</div>
-    <div id="keys">WASD / Flechas: moverse · Espacio: saltar · K / Enter: besar · Mouse: girar cámara</div>
+    <div class="bar"><span>❤️</span><div class="track"><div id="hp"></div></div></div>
+    <div class="bar hidden" id="bossBar"><span>🐶</span><div class="track"><div id="bossHp"></div></div></div>
+    <div id="keys">WASD/Flechas: moverse · Espacio: saltar · J: espada · L (mantener): escudo · K/Enter: besar · P: proponer · Mouse: cámara</div>
   </div>
-  <div id="prompt" class="hidden">Presiona <b>K</b> o <b>Enter</b> para besar 💋</div>
+  <div id="prompt" class="hidden"></div>
+  <div id="flash"></div>
+
   <div id="love" class="hidden">
-    <h1>Te quiero mucho</h1>
+    <h1 id="loveText">Te quiero mucho</h1>
     <p id="again">Presiona R para jugar de nuevo</p>
   </div>
+
+  <div id="ask" class="hidden">
+    <div class="card">
+      <h2>¿Quieres ser mi novia? 💍</h2>
+      <div class="btns">
+        <button id="yes">Sí 💖</button>
+        <button id="no">No</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="over" class="hidden">
+    <h1>¡Cerbero te atrapó! 🐶</h1>
+    <button id="retry">Intentar de nuevo</button>
+  </div>
+
   <div id="touch" class="hidden">
     <div id="stick"><div id="knob"></div></div>
-    <button id="btnJump">⤒</button>
-    <button id="btnKiss">💋</button>
+    <button id="btnJump" class="tb">⤒</button>
+    <button id="btnSword" class="tb">⚔️</button>
+    <button id="btnShield" class="tb">🛡️</button>
+    <button id="btnKiss" class="tb">💋</button>
+    <button id="btnRing" class="tb">💍</button>
   </div>
   <div id="loading">Cargando...</div>
   <script type="module" src="main.js"></script>
